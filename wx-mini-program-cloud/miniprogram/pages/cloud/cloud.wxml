@@ -1,0 +1,15 @@
+<view>云数据库</view>
+<button type="primary" bindtap="addUser">添加用户</button>
+<button type="primary" bindtap="updateUser">更新用户信息</button>
+<button type="warn" bindtap="deleteUser">删除用户</button>
+<button type="primary" bindtap="searchUser">查询用户</button>
+<view>云函数</view>
+<button type="primary" bindtap="sum">调用sum云函数</button>
+<button type="primary" bindtap="getOpenID">获取用户openID</button>
+<view>云存储</view>
+<button type="primary" bindtap="upload">上传图片</button>
+<button type="primary" bindtap="show">展示图片</button>
+<block wx:for="{{images}}">
+  <image src="{{item.filePath}}" alt="图片"></image>
+  <button type="primary" size="mini" data-fileid="{{item.filePath}}" bindtap="download">文件下载</button>
+</block>
